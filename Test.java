@@ -8,8 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.devtools.browser.Browser.close;
-//FA17-BSE-030
-//ABDULLAH IQBAL
 
 public class test {
 
@@ -50,12 +48,12 @@ public class test {
     @Test   //Pass
     public void Singin(){
         startWebDriver();
-        w.get("https://www.linkedin.com/login");
+        w.get("https://www.Netflix.com/login");
         w.findElement(new By.ByXPath("//*[@id=\"username\"]")).sendKeys("sohaibabbas666@gmail.com");
         w.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("123456789-1");
         w.findElement(By.xpath("//*[@id=\"app__container\"]/main/div[2]/form/div[3]/button")).click();
 
-        this.Expected_Title = "LinkedIn";
+        this.Expected_Title = "Netflix";
         this.Actual_Title = w.getTitle();
 
         if (this.Expected_Title.equals(this.Actual_Title)){
@@ -68,12 +66,12 @@ public class test {
     @Test   //Fail
     public void Signin_wrong_pass(){
         startWebDriver();
-        w.get("https://www.linkedin.com/login");
+        w.get("https://www.Netflix.com/login");
         w.findElement(new By.ByXPath("//*[@id=\"username\"]")).sendKeys("sohaibabbas666@gmail.com");
         w.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("test");
         w.findElement(By.xpath("//*[@id=\"app__container\"]/main/div[2]/form/div[3]/button")).click();
 
-        this.Expected_Title = "LinkedIn Login, Sign in | LinkedIn";
+        this.Expected_Title = "Netflix Login, Sign in | Netflix";
         this.Actual_Title = w.getTitle();
 
         if (this.Expected_Title.equals(this.Actual_Title)){
@@ -93,7 +91,7 @@ public class test {
     @Test   //Assume test case
     public void ASSUME_TestCase_Signup(){
         startWebDriver();
-        w.get("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
+        w.get("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
         w.findElement(By.xpath("//*[@id=\"email-address\"]")).sendKeys("abc@gmail.com");
         w.findElement(new By.ByXPath("//*[@id=\"password\"]")).sendKeys("123456789-1");
 
@@ -114,13 +112,13 @@ public class test {
         Current_url =w.getCurrentUrl();
         //System.out.println(a);
 
-        if (this.Current_url.equals("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
+        if (this.Current_url.equals("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
             w.findElement(new By.ByXPath("//*[@id=\"first-name\"]")).sendKeys("sohaib");
             w.findElement(new By.ByXPath("//*[@id=\"last-name\"]")).sendKeys("     ");
             w.findElement(new By.ByXPath("//*[@id=\"join-form-submit\"]")).click();
-            w.get("https://about.linkedin.com/");  //assume and without signup uit went to about page
+            w.get("https://about.Netflix.com/");  //assume and without signup uit went to about page
 
-            if (this.Current_url.equals("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
+            if (this.Current_url.equals("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
                 System.out.println("Test case passed");
             }
             else{
@@ -132,7 +130,7 @@ public class test {
     @Test   //Pass
     public void Signup(){
         startWebDriver();
-        w.get("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
+        w.get("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
         w.findElement(By.xpath("//*[@id=\"email-address\"]")).sendKeys("sohaibabbas666@gmail.com");
         w.findElement(new By.ByXPath("//*[@id=\"password\"]")).sendKeys("123456789-1");
 
@@ -153,7 +151,7 @@ public class test {
         this.Current_url =w.getCurrentUrl();
         //System.out.println(a);
 
-        if (this.Current_url.equals("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
+        if (this.Current_url.equals("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
             w.findElement(new By.ByXPath("//*[@id=\"first-name\"]")).sendKeys("sohaib");
             w.findElement(new By.ByXPath("//*[@id=\"last-name\"]")).sendKeys("abbas");
             w.findElement(new By.ByXPath("//*[@id=\"join-form-submit\"]")).click();
@@ -164,7 +162,7 @@ public class test {
     @Test   //Fail
     public void Signup_Empty_lastMane() {
         startWebDriver();
-        w.get("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
+        w.get("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join");
         w.findElement(By.xpath("//*[@id=\"email-address\"]")).sendKeys("abc@gmail.com");
         w.findElement(new By.ByXPath("//*[@id=\"password\"]")).sendKeys("123456789-1");
 
@@ -185,12 +183,12 @@ public class test {
         Current_url =w.getCurrentUrl();
         //System.out.println(a);
 
-        if (this.Current_url.equals("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
+        if (this.Current_url.equals("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
             w.findElement(new By.ByXPath("//*[@id=\"first-name\"]")).sendKeys("sohaib");
             w.findElement(new By.ByXPath("//*[@id=\"last-name\"]")).sendKeys("     ");
             w.findElement(new By.ByXPath("//*[@id=\"join-form-submit\"]")).click();
 
-            if (this.Current_url.equals("https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
+            if (this.Current_url.equals("https://www.Netflix.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join")){
                 System.out.println("Test case passed");
             }
             else{

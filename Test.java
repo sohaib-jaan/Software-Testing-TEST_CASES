@@ -31,7 +31,7 @@ public class test {
         w.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("123456789-1");
         w.findElement(By.xpath("//*[@id=\"app__container\"]/main/div[2]/form/div[3]/button")).click();
 
-        w.get("https://about.linkedin.com/"); //Without signin it went to about page
+        w.get("https://about.Netflix.com/"); //Without signin it went to about page
 
         this.Expected_Title = "Netflix Login, Sign in | Netflix";
         this.Actual_Title = w.getTitle();

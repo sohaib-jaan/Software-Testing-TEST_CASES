@@ -33,7 +33,7 @@ public class test {
 
         w.get("https://about.linkedin.com/"); //Without signin it went to about page
 
-        this.Expected_Title = "LinkedIn Login, Sign in | LinkedIn";
+        this.Expected_Title = "Netflix Login, Sign in | Netflix";
         this.Actual_Title = w.getTitle();
 
         if (this.Expected_Title.equals(this.Actual_Title)){
